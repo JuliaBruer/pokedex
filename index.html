@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="init()">
+    <!--navbar-->
+    <nav class="navbar">
+        <h1 class="h1">Pokédex</h1>
+        <div class="search">
+            <input oninput="searchPokemon()" id="search-pokemon" class="inputfield" type="text" placeholder="search your Pokémon">
+        </div>
+    </nav>
+    <hr class="hr">
+    
+    <!--Pokémon cards-->
+    <div id="pokemon-cards" class="pokemon-cards"></div>
+
+    <!--arrow upward-->
+    <div class="arrow-up-content">
+        <div class="arrow-up-container" onclick="scrollToTop()">
+            <img src="./img/arrow-up.ico" alt="arrow upward">
+        </div>
+    </div>
+
+    <!--Pokémon container with the details of the respective Pokémon-->
+    <div id="pokemon-container" class="pokemon-container d-none"></div>
+
+    <!--load more button placed in the footer-->
+    <footer class="footer">
+        <button class="load-more-btn" onclick="loadMorePokemons()">load more</button>
+    </footer>
+</body>
+</html>
